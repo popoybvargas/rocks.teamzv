@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html
+{
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body
+{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  color: #333;
+  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main
+{
+  position: relative;
+  width: 100rem;
+  height: 60rem;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  overflow: hidden;
+  display: flex;
+}
+
+.section
+{
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.75s;
+}
+
+.name
+{
+  position: relative;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  color: #737373;
+}
+
+.header
+{
+  font-size: 7rem;
+  font-weight: 300;
+  color: #c7365f;
+  margin-bottom: auto;
+}
+
+.section--left
+{
+  padding: 9rem;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.section--left .name
+{
+  font-weight: 700;
+}
+
+.section--left .header
+{
+  font-weight: 400;
+}
+
+.section--left .members
+{
+  opacity: 1;
+}
+
+.members
+{
+  background-color: #c7365f;
+  opacity: 0.8;
+  border-radius: 9px;
+  color: #fff;
+  width: 75%;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.75s;
+}
+
+.members-label
+{
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: #ddd;
+}
+
+#slides
+{
+  width: 100%;
+  height: 50%;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  background-size: cover;
+}
+
+.slide
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  opacity: 0;
+  z-index: 1;
+
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.showing
+{
+  opacity: 1;
+  z-index: 2;
+}
